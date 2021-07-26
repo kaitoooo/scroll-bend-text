@@ -1,0 +1,79 @@
+.kv {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $color-white;
+
+    &__slider {
+        @include sp {
+            height: 100%;
+        }
+        &--main {
+            width: 100%;
+            height: 100vw;
+            transition: opacity 0.6s ease, transform 0.3s ease;
+            @include sp {
+                height: 100%;
+            }
+        }
+
+        &--slide {
+            overflow: hidden;
+            backface-visibility: hidden;
+        }
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-image: url('../img/img1.jpeg');
+
+            &-02 {
+                background-image: url('../img/img2.jpeg');
+            }
+            &-03 {
+                background-image: url('../img/img3.jpeg');
+            }
+
+            @include sp {
+                background-size: cover;
+                background-position: top;
+            }
+        }
+    }
+
+    &__title {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        font-size: get_vw(50);
+        font-family: $font-all;
+        font-weight: 400;
+        color: #f4f0e9;
+        mix-blend-mode: difference;
+        z-index: 2;
+        @include sp {
+            font-size: get_vw_sp(20);
+        }
+
+        span {
+            white-space: pre;
+            display: inline-block;
+            will-change: transform;
+        }
+    }
+    a {
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        width: 1px;
+        height: 100px;
+        background-color: #f4f0e9;
+        animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
+        mix-blend-mode: difference;
+        z-index: 2;
+    }
+}

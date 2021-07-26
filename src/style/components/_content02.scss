@@ -1,0 +1,100 @@
+.content02 {
+    position: relative;
+    background-color: #f4f0e9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: get_vw(50) 0;
+    @include sp {
+        padding: get_vw_sp(25) 0 get_vw_sp(20);
+    }
+
+    &__img {
+        position: relative;
+        overflow: hidden;
+        margin: 0 0 0.2%;
+        width: 33.2%;
+        height: 700px;
+        transition: ease-in-out 0.6s;
+        @include sp {
+            margin: 0 0 0.2%;
+            width: 49.8%;
+            height: get_vw_sp(200);
+        }
+
+        &:hover {
+            &::after {
+                transform: scale(1.05);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: 0.6s ease-in-out;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+
+        &--no01 {
+            &::after {
+                background-image: url('../img/img6.jpeg');
+            }
+        }
+        &--no02 {
+            &::after {
+                background-image: url('../img/img7.jpeg');
+            }
+        }
+        &--no03 {
+            &::after {
+                background-image: url('../img/img8.jpeg');
+            }
+        }
+        &--no04 {
+            &::after {
+                background-image: url('../img/img9.jpeg');
+            }
+        }
+        &--no05 {
+            &::after {
+                background-image: url('../img/img10.jpeg');
+            }
+        }
+        &--no06 {
+            &::after {
+                background-image: url('../img/img11.jpeg');
+            }
+        }
+
+        &--caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            mix-blend-mode: difference;
+            font-size: get_vw(40);
+            font-weight: 400;
+            font-family: $font-all;
+            text-transform: var(--text-transform-title);
+            z-index: 3;
+            @include sp {
+                font-size: get_vw_sp(20);
+            }
+
+            span {
+                white-space: pre;
+                display: inline-block;
+                will-change: transform;
+            }
+        }
+    }
+}

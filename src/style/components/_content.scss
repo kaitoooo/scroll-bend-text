@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    --color-text: #fff;
+    --color-bg: #131212;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+.content {
+    position: relative;
+    background-color: #f4f0e9;
+    padding: get_vw(100) 0;
+    @include sp {
+        padding: get_vw_sp(50) 0;
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__left,
+    &__right {
+        position: relative;
+        width: 30%;
+        @include sp {
+            display: none;
+        }
+
+        &--text {
+            position: absolute;
+            font-size: get_vw(70);
+            font-weight: 400;
+            font-family: $font-all;
+            color: #fff;
+            text-transform: var(--text-transform-title);
+            mix-blend-mode: difference;
+            z-index: 2;
+            @include sp {
+                font-size: get_vw_sp(35);
+            }
+
+            span {
+                white-space: pre;
+                display: inline-block;
+                will-change: transform;
+            }
+        }
+    }
+
+    &__left {
+        &--text {
+            top: 50%;
+            right: -10%;
+            @include sp {
+                right: 0;
+                left: 0;
+            }
+        }
+    }
+    &__right {
+        &--text {
+            top: 50%;
+            left: -10%;
+            @include sp {
+                right: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__img {
+        width: 70%;
+        will-change: transform;
+        margin: get_vw(50) auto 0;
+        @include sp {
+            width: 100%;
+            margin: get_vw_sp(25) auto 0;
+        }
+
+        &--caption {
+            display: none;
+            @include sp {
+                display: block;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                color: #fff;
+                mix-blend-mode: difference;
+                font-size: get_vw_sp(20);
+                font-weight: 400;
+                font-family: $font-all;
+                text-transform: var(--text-transform-title);
+                z-index: 3;
+
+                span {
+                    white-space: pre;
+                    display: inline-block;
+                    will-change: transform;
+                }
+            }
+        }
+    }
+}

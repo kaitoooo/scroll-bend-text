@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrolling Bent Text</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="スクロールで曲がって見えるテキストのデモサイトです。" />
+        <meta name="keywords" content="," />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta property="og:title" content="Scrolling Bent Text" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Scrolling Bent Text" />
+        <meta property="og:image" content="https://kaito-takase.dev/scrolling-bent-text/ogp.png" />
+        <meta property="og:url" content="https://kaito-takase.dev/scrolling-bent-text/" />
+        <meta property="og:description" content="スクロールで曲がって見えるテキストのデモサイトです。" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="Scrolling_Bent_Text_JP" />
+        <meta name="twitter:title" content="Scrolling Bent Text" />
+        <meta name="twitter:description" content="スクロールで曲がって見えるテキストのデモサイトです。" />
+        <meta name="twitter:image" content="https://kaito-takase.dev/scrolling-bent-text/ogp.png" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="header">
+            <a href="/" class="header__link">Go Home</a>
+            <a href="https://github.com/kaitoooo/scroll-bend-text" target="_black" rel="noopener noreferrer" class="header__link">Git</a>
+        </header>
+        <main data-scroll-container>
+            <section class="kv">
+                <div class="kv__slider">
+                    <div class="swiper-container kv__slider--main" data-slider="kv">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide kv__slider--slide">
+                                <div class="kv__slider--img" data-swiper-parallax-x="80%"></div>
+                            </div>
+                            <div class="swiper-slide kv__slider--slide">
+                                <div class="kv__slider--img kv__slider--img-02" data-swiper-parallax-x="80%"></div>
+                            </div>
+                            <div class="swiper-slide kv__slider--slide">
+                                <div class="kv__slider--img kv__slider--img-03" data-swiper-parallax-x="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="kv__title" data-splitting>Scrolling bent text</h1>
+                <a href="#"></a>
+            </section>
+            <section class="content">
+                <div class="content__inner">
+                    <div class="content__left">
+                        <h2 data-splitting class="content__left--text">Persepolis</h2>
+                    </div>
+                    <figure class="content__img" data-scroll data-scroll-speed="1">
+                        <img src="img/img4.jpeg" alt="" role="none" width="1280" height="853" />
+                        <figcaption class="content__img--caption" data-splitting>Persepolis</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="content02">
+                <figure class="content02__img content02__img--no01">
+                    <figcaption class="content02__img--caption" data-splitting>Bench</figcaption>
+                </figure>
+                <figure class="content02__img content02__img--no02">
+                    <figcaption class="content02__img--caption" data-splitting>Sofa</figcaption>
+                </figure>
+                <figure class="content02__img content02__img--no03">
+                    <figcaption class="content02__img--caption" data-splitting>Chair</figcaption>
+                </figure>
+                <figure class="content02__img content02__img--no04">
+                    <figcaption class="content02__img--caption" data-splitting>Shelf</figcaption>
+                </figure>
+                <figure class="content02__img content02__img--no05">
+                    <figcaption class="content02__img--caption" data-splitting>Vase</figcaption>
+                </figure>
+                <figure class="content02__img content02__img--no06">
+                    <figcaption class="content02__img--caption" data-splitting>Seat</figcaption>
+                </figure>
+            </section>
+            <section class="content">
+                <div class="content__inner">
+                    <figure class="content__img" data-scroll data-scroll-speed="1">
+                        <img src="img/img5.jpeg" alt="" role="none" width="1280" height="853" />
+                        <figcaption class="content__img--caption" data-splitting>Scelerisque</figcaption>
+                    </figure>
+                    <div class="content__right">
+                        <h2 data-splitting class="content__right--text">Scelerisque</h2>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <small class="footer__copy">Kaito Takase Portfolio</small>
+            </footer>
+        </main>
+    </body>
+</html>

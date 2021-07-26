@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px 0;
+    margin: 0 get_vw(30) 0 auto;
+    mix-blend-mode: difference;
+    z-index: 3;
+    @include sp {
+        margin: 0 get_vw_sp(15) 0 auto;
+    }
+
+    &__link {
+        font-size: get_vw(20);
+        color: $color-white;
+        font-family: $font-all;
+        text-decoration: none;
+        mix-blend-mode: difference;
+        padding: 0 get_vw(20);
+        @include sp {
+            font-size: get_vw_sp(13);
+            padding: 0 get_vw_sp(11);
+        }
+    }
+}
